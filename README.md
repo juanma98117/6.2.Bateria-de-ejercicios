@@ -1,5 +1,5 @@
 UML CREADO
-'''mermaid
+```mermaid
 classDiagram
 direction TB
     class Usuario {
@@ -8,8 +8,5 @@ direction TB
 	    + String correo
         + cambiarPassword(nueva : String) void
         - validarEmail() : boolean      
-
     }
-    
-
-'''
+```
