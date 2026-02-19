@@ -5,18 +5,11 @@ UML CREADO
 classDiagram
 
 class CentroComercial {
-    -String nombre
-    -List~Tienda~ tiendas
-    +CentroComercial(nombre)
-    +agregarTienda(t : Tienda)
-    +getTiendas() List~Tienda~
+    
 }
 
 class Tienda {
-    -String nombre
-    -CentroComercial centroComercial
-    +Tienda(nombre, centro)
-    +getCentroComercial() CentroComercial
+   
 }
 
 CentroComercial "1" --> "1..*" Tienda
