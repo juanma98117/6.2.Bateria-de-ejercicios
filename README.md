@@ -1,11 +1,15 @@
 UML CREADO
-+----------------------------------+
-|             Usuario              |
-+----------------------------------+
-| - nombreUsuario : String         |
-| - contraseña : String            |
-| + correo : String                |
-+----------------------------------+
-| + cambiarPassword(nueva : String) : void
-| - validarEmail() : boolean       |
-+----------------------------------+
+'''mermaid
+classDiagram
+direction TB
+    class Usuario {
+	    - String nombreUsuario
+	    - String contraseña
+	    + String correo
+        + cambiarPassword(nueva : String) void
+        - validarEmail() : boolean      
+
+    }
+    
+
+'''
