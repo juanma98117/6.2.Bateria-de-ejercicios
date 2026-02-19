@@ -9,4 +9,5 @@ direction TB
         + cambiarPassword(nueva : String) void
         - validarEmail() : boolean      
     }
+    
 ```
