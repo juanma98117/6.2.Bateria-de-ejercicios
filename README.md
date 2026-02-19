@@ -1,26 +1,29 @@
 # 6.2.Bateria-de-ejercicios
 UML CREADO 
-+------------------+
-|   MetodoPago     | <<interface>>
-+------------------+
-| + procesar(importe : double) : void
-+------------------+
+```mermaid
+classDiagram
 
-        ▲
-        |
-+------------------+          +------------------+
-|     Tarjeta      |          |      Paypal      |
-+------------------+          +------------------+
-| - numero : String|          | - email : String |
-| - titular : String|         +------------------+
-+------------------+          | + procesar(importe : double)
-| + procesar(importe : double)
-+------------------+
+class MetodoPago {
+    <<interface>>
+    +procesar(importe : double) void
+}
 
-+------------------+
-|      Carrito     |
-+------------------+
-|                  |
-+------------------+
-| + pagar(miMetodo : MetodoPago) : void
-+------------------+
+class Tarjeta {
+    -String numero
+    -String titular
+    +procesar(importe : double) void
+}
+
+class Paypal {
+    -String email
+    +procesar(importe : double) void
+}
+
+class Carrito {
+    +pagar(miMetodo : MetodoPago) void
+}
+
+MetodoPago <|.. Tarjeta
+MetodoPago <|.. Paypal
+Carrito --> MetodoPago
+```
